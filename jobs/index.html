@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Портфолио</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+<header>
+	<h1>Мартыненко Кира Юрьевна</h1>
+	<nav>
+		<a href="../index.html">Главная</a>
+	</nav>
+</header>
+
+<main>
+
+	<h2>Все мои работы</h2>
+
+	<section class="presentation">
+			<div	 class="image-container" onclick="showImage('../images/cat.jpg', 'кашак лежит')">
+	        <img src="../images/cat.jpg" alt="кашак лежит">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/error_sans.jpg', 'Error Sans')">
+	        <img src="../images/error_sans.jpg" alt="Error Sans">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/dark_friends.jpg', 'F.R.I.E.N.D.S')">
+	        <img src="../images/dark_friends.jpg" alt="F.R.I.E.N.D.S">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/light_friends.jpg', 'F.R.I.E.N.D.S')">
+	        <img src="../images/light_friends.jpg" alt="F.R.I.E.N.D.S">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/angel.jpg', 'ангел')">
+	        <img src="../images/angel.jpg" alt="ангел">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/angel_isaak.jpg', 'ангел плачет')">
+	        <img src="../images/angel_isaak.jpg" alt="ангел плачет">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/angry_sans.jpg', 'злой санс')">
+	        <img src="../images/angry_sans.jpg" alt="злой санс">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/bezumni.jpg', 'безумный')">
+	        <img src="../images/bezumni.jpg" alt="безумный">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/chara.jpg', 'чара')">
+	        <img src="../images/chara.jpg" alt="чара">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/gender.jpg', 'гендер')">
+	        <img src="../images/gender.jpg" alt="гендер">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/kikki.jpg', 'кикки')">
+	        <img src="../images/kikki.jpg" alt="кикки">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/pony_dark.jpg', 'red_sans.jpg')">
+	        <img src="../images/pony_dark.jpg" alt="red_sans.jpg">
+	    </div>
+
+			<div class="image-container" onclick="showImage('../images/sallyface.jpg', 'салли')">
+	        <img src="../images/sallyface.jpg" alt="салли">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/sans.jpg', 'санс')">
+	        <img src="../images/sans.jpg" alt="санс">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/smileface.jpg', 'смайлфейс')">
+	        <img src="../images/smileface.jpg" alt="смайлфейс">
+	    </div>
+
+			<div class="image-container" onclick="showImage('../images/w_nonyazik.jpg', 'без языка')">
+	        <img src="../images/w_nonyazik.jpg" alt="без языка">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/w_yazik.jpg', 'с языком')">
+	        <img src="../images/w_yazik.jpg" alt="с языком">
+	    </div>
+
+	    <div class="image-container" onclick="showImage('../images/without_face.jpg', 'без лица')">
+	        <img src="../images/without_face.jpg" alt="без лица">
+	    </div>
+
+	    
+
+	</section>
+
+	<div id="modal" class="modal" style="display: none" onclick="closeModal()">
+	    <div class="modal-content-container">
+	        <img id="modalImage" class="modal-content">
+	        <div id="caption" class="caption"></div>
+	    </div>
+	</div>
+
+</main>
+
+<footer>
+	<h2>Связь со мной</h2>
+
+	<section>
+		<div class="telegram"><a href=""><img src="../images/telegram.png" alt="tg"></a></div>
+		<div class="vk"><a href=""><img src="../images/vk.png" alt="vk"></a></div>
+	</section>
+
+</footer>
+
+
+
+  <script>
+function showImage(src, alt) {
+    var modal = document.getElementById('modal');
+    var modalImage = document.getElementById('modalImage');
+    var captionText = document.getElementById('caption');
+
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    modal.style.display = 'flex';
+    modalImage.src = src;
+    modalImage.alt = alt;
+    captionText.innerHTML = alt;
+}
+
+function closeModal() {
+    var modal = document.getElementById('modal');
+
+    modal.style.backgroundColor = 'transparent';
+    modal.style.display = 'none';
+}
+
+
+  </script>
+
+</body>
+</html>
